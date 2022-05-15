@@ -5,7 +5,7 @@ open fsandbox.Common
 module Memoize =
 
     let private useCache<'key, 'value when 'key : equality and 'value : equality> () =
-        let mutable dic = System.Collections.Generic.Dictionary<'key, 'value>()
+        let dic = System.Collections.Generic.Dictionary<'key, 'value>()
 
         let tryGetValue n =
             match dic.TryGetValue n with
